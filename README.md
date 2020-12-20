@@ -35,7 +35,7 @@ essentially by binding **train.x** + **train.act.code** + **train.subject.code**
 which i then joined  by row to form the  **full** dataset
 
 ###### **STEP 3&4 -**
-###### **-Appropriately Name data set columns with meaningful names(instead of  V1..etc) & **
+###### **-Appropriately Name data set columns with meaningful names(instead of  V1..etc) &**
 ###### **-Use descriptive activity names to name the activities in the data set (1=Walking .. etc)**
 This  step made more sense to add this stage since i will be suing those to extraxt  specific columns
 I did this by using the the provided  feature names and acivity labels.
@@ -47,7 +47,7 @@ For this i used **dplyr** *select* function with the  *contains()*  option to se
 
 In **SubsetData** - each row is a seperate set of  measurments of  a subject  during an activity . It seems there is  more than one set of measurement for each subject during each activity which is  why it makes sense to summarise in the next  step using the  mean function.(**Tidy  Dataset!**)
 
-###### **STEP 5 **
+###### **STEP 5**
 Again Used  **Dplyr** to group  the  data set by Activity then by Subject to Summarise the  different repeated measurements to get
 their corresponding means. This  was  done using the *summarize* functions using the *across*  option.
 Finally - USed **Janitor**  *clean_names* to clean up  the variable names. Which will be further  explained in the codebook .rmd file.
