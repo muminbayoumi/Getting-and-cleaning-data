@@ -93,6 +93,6 @@ SummarisedSubset <- subsetData %>%
         group_by(Activity,Subject) %>%
         summarise(across(.col=everything(),.fns=mean)) %>% clean_names(case='small_camel')
 
-write.table(SummarisedSubset,file = "tidydata.txt")
+write.table(SummarisedSubset,file = "tidydata.txt",row.names = F)
 
 
